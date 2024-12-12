@@ -1,7 +1,6 @@
-from keysender import pressKey, releaseKey
 from time import sleep
 import argparse
-import binascii
+from keymapper import sendStringAsVK
 
 defaultFile = "./clipboard.txt"
 
@@ -18,31 +17,18 @@ def init():
     args = parser.parse_args()
     return args
 
-def letterToHex(letter):
-    hexStringValue = hex(ord(letter))
-    cleanedUp = format(ord("c"), "x")
-
-def sendString(string):
-    for letter in string:
-        decvalue = ord(letter)
-        pressKey(decvalue)
-        sleep(1)
-        releaseKey(decvalue)
-
 def getFileContent(filePath):
     with open(filePath, "r") as file:
         content = file.read()
-        file.close
     return content
 
 def main():
+    # Wait 10 seconds so user can focus on the target window
     sleep(10)
     args = init()
     content = getFileContent(args.filepath)
-    sendString(content)
+    sendStringAsVK(content)  # Use our helper from keymapper.py
     return
-
 
 if __name__ == "__main__":
     main()
- 

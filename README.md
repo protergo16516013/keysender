@@ -1,1 +1,3 @@
 # keysender
+
+damn if only you could copy paste to some rdp's... well not to worry this send the exact keystroke so it looked like you typed it manually, so why not doing it by online ? or just copy paste online ?? becs SOME OF EM...  akhem akhem... FEEL THE NEED TO ASSERT CONTROL BY ONLY ALLOWING SOME SITES...
